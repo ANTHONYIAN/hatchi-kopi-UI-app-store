@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☕ Hatchi Kopi ✨</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to right, #ffe0f0, #ffe4c4);
+      color: #5a3e36;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    #logo img {
+      height: 160px;
+      width: 160px;
+      border-radius: 50%;
+      margin-top: 20px;
+      box-shadow: 0 0 15px rgba(255, 182, 193, 0.7);
+    }
+
+    #title {
+      font-size: 2.5em;
+      color: #d17b88;
+      margin-top: 10px;
+      animation: pop 1.2s ease-in-out;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    #menu {
+      background-color: #fff0f5;
+      margin: 30px auto;
+      padding: 20px;
+      width: 70%;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .price {
+      display: block;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    #controls button {
+      background-color: #ffb6c1;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #controls button:hover {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    #storestat {
+      margin-top: 20px;
+      font-size: 1em;
+    }
+
+    #text {
+      margin: 40px auto;
+      width: 80%;
+      background-color: #fff8dc;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    #footer {
+      background-color: #fcd5ce;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #6e4e42;
+    }
+  </style>
+</head>
+<body>
+  <div id="logo">
+    <img src="Hatchi koffe pic.jpg" alt="Hatchi Kopi logo">
+  </div>
+
+  <h1 id="title">WELCOME TO Hatchi KOPI! 🍵💕</h1>
+
+  <div id="menu">
+    <span class="price">☕ Soda Series:
+      <strong>160oz - 39 pesos</strong>
+    </span>
+    <span class="price">☕ Soda Series:
+      <strong>220oz - 49 pesos</strong>
+    </span>
+    <span class="price">❤ Milk Series:
+      <strong>45oz - 39 pesos</strong>
+    </span>
+    <span class="price">❤ Milk Series:
+      <strong>55oz - 49 pesos</strong>
+    </span>
+  </div>
+
+  <div id="controls">
+    <button class="button1">🛍 Go to store</button>
+    <button class="button2">🛒 Go to cart</button>
+    <button class="button3">✨ Go to try!</button>
+  </div>
+
+  <div id="storestat">
+    <span class="stat">🧑‍🍳 Owner Name: <strong><span id="ownerStat">Lorainy</span></strong></span><br>
+    <span class="stat">❤ Health benefits: <strong><span id="healthStat">Good for boosting your mood and energy!</span></strong></span>
+  </div>
+
+  <div id="text">
+    <p>Welcome to <strong>Hatchi Kopi</strong>! ✨</p>
+    <p>We're thrilled to have you here. To discover our pricing options, please click the button above.</p>
+    <p>If you have any questions or need assistance, our Hatchi Kopi team is here to help. Enjoy your experience with us!</p>
+  </div>
+
+  <div id="footer">
+    <p>© 2021 Hatchi Kopi. All rights reserved.</p>
+  </div>
+
+  <script>
+    const button1 = document.querySelector('.button1');
+    const button2 = document.querySelector('.button2');
+    const button3 = document.querySelector('.button3');
+    const text = document.querySelector("#text");
+    const owner = document.querySelector("#ownerStat");
+    const health = document.querySelector("#healthStat");
+
+    const updateText = (message, b1, b2, b3) => {
+      text.innerHTML = `<p>${message}</p>`;
+      if (b1) button1.textContent = b1;
+      if (b2) button2.textContent = b2;
+      if (b3) button3.textContent = b3;
+    };
+
+    const gotoStore = () => {
+      updateText("Welcome to the Milk and Soda Store!", 
+                 "Buy Order: Soda Series (₱39)", 
+                 "🛒 Add to cart", 
+                 "✨ Try Now!");
+      console.log("Navigated to store view.");
+    };
+
+    const gotoCart = () => {
+      updateText("You're viewing your cute lil cart 🛒", 
+                 "🛍 Back to store", 
+                 "Checkout ₱0.00", 
+                 "Add more!");
+      console.log("Navigated to cart.");
+    };
+
+    const gotoTry = () => {
+      updateText("Feeling adventurous? Try our surprise drink! ✨", 
+                 "Surprise Me!", 
+                 "Get Milk", 
+                 "Get Soda");
+      console.log("Navigated to try something new.");
+    };
+
+    button1.addEventListener("click", gotoStore);
+    button2.addEventListener("click", gotoCart);
+    button3.addEventListener("click", gotoTry);
+  </script>
+</body>
+</html>

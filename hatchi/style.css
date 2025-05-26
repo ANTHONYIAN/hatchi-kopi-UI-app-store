@@ -1,0 +1,71 @@
+body {
+    background-color: pink;
+    background-image: url(Hatchi\ koffe\ pic.jpg)
+}
+
+#logo{
+    width: 1000px;
+    height: 50px;
+    padding: 0%;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#text{
+    background-color: black;
+}
+
+#title{
+    background-color: whitesmoke;
+    color: blanchedalmond;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    border-inline-start: 0cap;
+}
+
+#HatchiKopi{
+    max-width: fit-content;
+    max-height: fit-content;
+    background-color: lightgray;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin: 0 auto;   
+}
+
+#menu{
+    background-color: lightgray;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#controls{
+    background-color: lightgray;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#storestat{
+    background-color: lightgrey;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer{
+    height: 30px;
+    background-color: black;
+    padding: 6px;
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
